@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Study · Lewis Buenaventura</title>
+  <meta name="description" content="Case study — Lewis Buenaventura, Data Analyst.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="case">
+
+  <canvas id="world" class="world-canvas" aria-hidden="true"></canvas>
+
+  <div class="case-shell">
+
+    <div class="case-topbar">
+      <a class="case-back" href="index.html#projects">
+        <span class="cta-arrow"></span><span>All projects</span>
+      </a>
+      <span class="case-topbar-tag" id="caseTag">CASE STUDY · 01 / 04</span>
+    </div>
+
+    <header class="case-hero" data-world="dawn">
+      <h1 class="case-title" id="caseTitle">
+        Loading <span class="serif-it">case study…</span>
+      </h1>
+      <p class="case-lede" id="caseLede"></p>
+
+      <div class="case-meta-grid" id="caseMeta">
+        <div class="case-meta-cell glass">
+          <span class="case-meta-key">ROLE</span>
+          <span class="case-meta-val" id="metaRole">—</span>
+        </div>
+        <div class="case-meta-cell glass">
+          <span class="case-meta-key">TIMELINE</span>
+          <span class="case-meta-val" id="metaTimeline">—</span>
+        </div>
+        <div class="case-meta-cell glass">
+          <span class="case-meta-key">TOOLS</span>
+          <span class="case-meta-val" id="metaTools">—</span>
+        </div>
+        <div class="case-meta-cell glass">
+          <span class="case-meta-key">ANALYSIS</span>
+          <span class="case-meta-val" id="metaAnalysis">—</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 1 · BUSINESS CONTEXT -->
+    <section class="case-section">
+      <div class="case-h">Business Context</div>
+      <div class="case-body" id="caseContext"></div>
+    </section>
+
+    <!-- 2 · PROBLEM -->
+    <section class="case-section">
+      <div class="case-h">The Problem</div>
+      <div class="case-body" id="caseProblem"></div>
+    </section>
+
+    <!-- 3 · AVAILABLE DATA -->
+    <section class="case-section">
+      <div class="case-h">Available Data</div>
+      <div class="case-body" id="caseDataBody"></div>
+      <ul class="case-datalist" id="caseData"></ul>
+    </section>
+
+    <!-- 4 · METHODOLOGY (pipeline stepper) -->
+    <section class="case-section">
+      <div class="case-h">Methodology</div>
+      <p class="case-body case-pipeline-intro">
+        The build follows the same pipeline every time. Step through it:
+      </p>
+
+      <div class="pipeline" id="pipeline">
+        <div class="pipeline-tabs" id="pipelineTabs" role="tablist" aria-label="Pipeline stages"></div>
+
+        <div class="pipeline-stage glass-deep">
+          <div class="pipeline-shot">
+            <div class="project-shot-placeholder">
+              <div class="shot-grid">
+                <div class="shot-row"></div><div class="shot-row"></div>
+                <div class="shot-row"></div><div class="shot-row"></div>
+              </div>
+              <span class="shot-label mono" id="pipeShotLabel">SCREENSHOT</span>
+            </div>
+            <img id="pipeShot" src="" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="pipeline-info">
+            <div class="pipeline-stage-num mono" id="pipeNum">01 / 05</div>
+            <h3 class="pipeline-stage-title" id="pipeTitle">Stage</h3>
+            <p class="pipeline-stage-desc" id="pipeDesc">Description.</p>
+            <div class="pipeline-nav">
+              <button class="pipeline-btn" id="pipePrev" aria-label="Previous stage">
+                <span class="cta-arrow" style="transform:rotate(180deg)"></span>
+              </button>
+              <button class="pipeline-btn" id="pipeNext" aria-label="Next stage">
+                <span class="cta-arrow"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · DASHBOARD -->
+    <section class="case-section">
+      <div class="case-h" id="caseDashHeading">The Dashboard</div>
+      <div class="case-body" id="caseDashBody"></div>
+      <div class="case-shot glass-deep">
+        <div class="project-shot-placeholder">
+          <div class="shot-grid">
+            <div class="shot-row"></div><div class="shot-row"></div>
+            <div class="shot-row"></div><div class="shot-row"></div>
+          </div>
+          <span class="shot-label mono" id="caseShotLabel">FINAL DASHBOARD</span>
+        </div>
+        <img id="caseShot" src="" alt="Dashboard snapshot" onerror="this.style.display='none'">
+      </div>
+    </section>
+
+    <!-- 6 · KEY FINDINGS -->
+    <section class="case-section">
+      <div class="case-h">Key Findings</div>
+      <div class="case-stats" id="caseStats"></div>
+      <ul class="case-list" id="caseFindings"></ul>
+    </section>
+
+    <!-- 7 · BUSINESS RECOMMENDATIONS -->
+    <section class="case-section">
+      <div class="case-h">Business Recommendations</div>
+      <ul class="case-list" id="caseRecommendations"></ul>
+    </section>
+
+    <!-- 8 · BUSINESS IMPACT -->
+    <section class="case-section">
+      <div class="case-h">Business Impact</div>
+      <div class="case-body" id="caseImpact"></div>
+      <div class="case-links" id="caseLinks"></div>
+    </section>
+
+    <!-- 9 · LESSONS LEARNED -->
+    <section class="case-section">
+      <div class="case-h">Lessons Learned</div>
+      <ul class="case-list" id="caseLessons"></ul>
+    </section>
+
+    <nav class="case-footer-nav" aria-label="Other case studies">
+      <a class="case-nav-link glass" id="casePrev" href="#">
+        <span class="case-nav-dir">&larr; PREVIOUS</span>
+        <span class="case-nav-title" id="casePrevTitle">&mdash;</span>
+      </a>
+      <a class="case-nav-link glass is-next" id="caseNext" href="#">
+        <span class="case-nav-dir">NEXT &rarr;</span>
+        <span class="case-nav-title" id="caseNextTitle">&mdash;</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <noscript>
+    <style>.case-shell{display:none}</style>
+    <p style="padding:60px 24px;text-align:center;font-family:system-ui">
+      This case study needs JavaScript enabled. Please return to
+      <a href="index.html" style="color:#89B6A5">the portfolio home</a>.
+    </p>
+  </noscript>
+
+  <script src="js/world.js"></script>
+  <script src="js/cases.js"></script>
+  <script src="js/case-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lewis Buenaventura · Data Analyst</title>
+  <meta name="description" content="Lewis Buenaventura — Data Analyst. Power BI, SQL, Excel, Python. Building dashboards and systems that get used.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="sage">
+
+  <!-- ░░ PRELOADER ░░ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-name mono">LEWIS BUENAVENTURA · DATA ANALYST</div>
+      <div class="preloader-pct" id="preloaderPct">0%</div>
+      <div class="preloader-line"><div class="preloader-fill" id="preloaderFill"></div></div>
+      <span class="mono preloader-msg" id="preloaderMsg">loading…</span>
+    </div>
+  </div>
+
+  <!-- ░░ AMBIENT LIGHT — sage mist canvas ░░ -->
+  <canvas id="world" class="world-canvas" aria-hidden="true"></canvas>
+
+  <!-- ░░ NAV — slim glass rail ░░ -->
+  <header class="nav glass" id="nav">
+    <a class="nav-logo" href="#hero" data-magnetic>
+      <span class="nav-logo-diamond"></span>LB
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#hero" data-magnetic>Panel</a>
+      <a href="#about" data-magnetic>About</a>
+      <a href="#workflow" data-magnetic>Process</a>
+      <a href="#projects" data-magnetic>Work</a>
+      <a href="#experience" data-magnetic>Experience</a>
+      <a href="#credentials" data-magnetic>Credentials</a>
+      <a href="#contact" data-magnetic>Contact</a>
+    </nav>
+    <a class="nav-status mono" href="mailto:buenaventuralewis@gmail.com" data-cursor="MAIL" data-magnetic>
+      <span class="status-dot"></span>OPEN TO PROJECTS
+    </a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="nav-sheet glass" id="navSheet" aria-hidden="true">
+    <a href="#hero">Panel</a>
+    <a href="#about">About</a>
+    <a href="#workflow">Process</a>
+    <a href="#projects">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="main">
+
+  <!-- =========================================================
+       HERO · THE DASHBOARD PANEL
+       Image 1 motif as a control panel — every element earns
+       its place: headline, headshot, skills matrix, focus,
+       and the experience/industries readout.
+       ========================================================= -->
+  <section class="hero" id="hero" data-world="dawn">
+    <div class="panel glass-deep" data-reveal>
+
+      <!-- panel main area -->
+      <div class="panel-main">
+
+        <!-- top bar -->
+        <div class="panel-top">
+          <div class="panel-title-group">
+            <h1 class="panel-title">Portfolio<span class="panel-title-dot">.</span></h1>
+            <span class="panel-sub mono">DATA ANALYST · MANILA · 2026</span>
+          </div>
+          <div class="panel-status mono" aria-label="Availability">
+            <span class="status-dot"></span>AVAILABLE
+          </div>
+        </div>
+
+        <!-- hero grid: left big card + right side stack -->
+        <div class="panel-grid">
+
+          <!-- LEFT — big card with headshot + intro + CTA -->
+          <div class="hero-card glass" data-tilt-lite>
+            <div class="hero-card-content">
+              <div class="hero-card-eyebrow mono">CURRENTLY · UAS</div>
+              <h2 class="hero-card-headline">
+                I turn messy data <br>
+                <span class="serif-it">into systems that get used.</span>
+              </h2>
+              <div class="hero-card-actions">
+                <a class="hero-card-cta" href="#projects" data-magnetic data-cursor="OPEN">
+                  <span>See the work</span>
+                  <span class="cta-arrow"></span>
+                </a>
+                <a class="hero-card-resume" href="Lewis-Buenaventura-Resume.pdf" download data-magnetic data-cursor="OPEN">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+                  <span>Résumé</span>
+                </a>
+              </div>
+            </div>
+            <div class="hero-card-portrait">
+              <div class="portrait-glow"></div>
+              <div class="portrait-frame">
+                <div class="portrait-placeholder mono">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M3 21c0-5 4-8 9-8s9 3 9 8"/>
+                  </svg>
+                  <span>HEADSHOT</span>
+                </div>
+                <img src="images/headshot.png" alt="Lewis Buenaventura" class="portrait-img"
+                     onerror="this.style.display='none'">
+              </div>
+              <div class="portrait-tag mono">LB · 2026</div>
+            </div>
+          </div>
+
+          <!-- RIGHT — vertical stack: chart + spotlight -->
+          <div class="hero-side">
+
+            <!-- tech matrix card (tools) -->
+            <div class="side-card glass" data-tilt-lite>
+              <div class="side-card-head">
+                <span class="side-card-title">Analytics Stack <span class="leaf">🌿</span></span>
+                <span class="side-card-meta mono">TECH MATRIX</span>
+              </div>
+              <div class="skills-matrix">
+                <div class="skill-row" data-skill="9">
+                  <span class="skill-name mono">POWER BI</span>
+                  <div class="skill-blocks" aria-label="Power BI: 9 out of 10"></div>
+                  <span class="skill-score mono">9</span>
+                </div>
+                <div class="skill-row" data-skill="8">
+                  <span class="skill-name mono">SQL</span>
+                  <div class="skill-blocks" aria-label="SQL: 8 out of 10"></div>
+                  <span class="skill-score mono">8</span>
+                </div>
+                <div class="skill-row" data-skill="8">
+                  <span class="skill-name mono">EXCEL</span>
+                  <div class="skill-blocks" aria-label="Excel: 8 out of 10"></div>
+                  <span class="skill-score mono">8</span>
+                </div>
+                <div class="skill-row" data-skill="6">
+                  <span class="skill-name mono">PYTHON</span>
+                  <div class="skill-blocks" aria-label="Python: 6 out of 10"></div>
+                  <span class="skill-score mono">6</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- skills matrix card (capabilities) -->
+            <div class="side-card glass" data-tilt-lite>
+              <div class="side-card-head">
+                <span class="side-card-title">Core Skills</span>
+                <span class="side-card-meta mono">SKILLS MATRIX</span>
+              </div>
+              <div class="skills-matrix">
+                <div class="skill-row" data-skill="9">
+                  <span class="skill-name mono">DATA VIZ</span>
+                  <div class="skill-blocks" aria-label="Data visualization: 9 out of 10"></div>
+                  <span class="skill-score mono">9</span>
+                </div>
+                <div class="skill-row" data-skill="8">
+                  <span class="skill-name mono">ANALYSIS</span>
+                  <div class="skill-blocks" aria-label="Data analysis: 8 out of 10"></div>
+                  <span class="skill-score mono">8</span>
+                </div>
+                <div class="skill-row" data-skill="8">
+                  <span class="skill-name mono">CLEANING</span>
+                  <div class="skill-blocks" aria-label="Data cleaning: 8 out of 10"></div>
+                  <span class="skill-score mono">8</span>
+                </div>
+                <div class="skill-row" data-skill="7">
+                  <span class="skill-name mono">AUTOMATION</span>
+                  <div class="skill-blocks" aria-label="Automation: 7 out of 10"></div>
+                  <span class="skill-score mono">7</span>
+                </div>
+                <div class="skill-row" data-skill="6">
+                  <span class="skill-name mono">API</span>
+                  <div class="skill-blocks" aria-label="API integration: 6 out of 10"></div>
+                  <span class="skill-score mono">6</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- READOUT ROW — Experience · Industries · Certified · In Progress -->
+        <div class="stat-row">
+          <div class="readout-card glass" data-stat data-cursor="VIEW">
+            <div class="readout-head mono">TOOLBOX</div>
+            <ul class="readout-list">
+              <li><span class="readout-dot"></span>BigQuery</li>
+              <li><span class="readout-dot"></span>Power Automate</li>
+              <li><span class="readout-dot"></span>HubSpot</li>
+              <li><span class="readout-dot"></span>Google Sheets</li>
+            </ul>
+          </div>
+          <div class="readout-card glass" data-stat data-cursor="VIEW">
+            <div class="readout-head mono">INDUSTRIES</div>
+            <ul class="readout-list">
+              <li><span class="readout-dot"></span>Technology</li>
+              <li><span class="readout-dot"></span>Venture Capital</li>
+              <li><span class="readout-dot"></span>Sales Pipeline</li>
+              <li><span class="readout-dot"></span>Operations</li>
+            </ul>
+          </div>
+          <div class="readout-card glass" data-stat data-cursor="VIEW">
+            <div class="readout-head mono">CERTIFIED</div>
+            <div class="readout-big">Data Analytics</div>
+            <div class="readout-sub mono">ESKWELABS BOOTCAMP</div>
+          </div>
+          <div class="readout-card glass" data-stat data-cursor="VIEW">
+            <div class="readout-head mono">IN PROGRESS</div>
+            <div class="readout-big">PL-300</div>
+            <div class="readout-sub mono">MICROSOFT · POWER BI ANALYST</div>
+          </div>
+        </div>
+
+        <!-- NOW STRIP — what Lewis is actively doing -->
+        <div class="now-strip">
+          <div class="now-label mono">
+            <span class="now-pulse"></span>NOW
+          </div>
+          <ul class="now-list">
+            <li><span class="now-dot"></span>Building CRM dashboards</li>
+            <li><span class="now-dot"></span>Studying PL-300</li>
+            <li><span class="now-dot"></span>Learning Fabric</li>
+            <li><span class="now-dot"></span>Exploring dbt</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-scroll mono" aria-hidden="true">
+      <span>SCROLL · MEET THE ANALYST</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       METRICS · business impact counters (count-up on scroll)
+       ========================================================= -->
+  <section class="metrics" id="metrics" data-world="dawn">
+    <div class="metrics-inner">
+      <div class="metric" data-metric data-value="12" data-suffix="+">
+        <div class="metric-value mono"><span class="metric-num">0</span><span class="metric-suffix">+</span></div>
+        <div class="metric-label">Dashboards Built</div>
+      </div>
+      <div class="metric" data-metric data-value="1" data-suffix="M+">
+        <div class="metric-value mono"><span class="metric-num">0</span><span class="metric-suffix">M+</span></div>
+        <div class="metric-label">Rows Processed</div>
+      </div>
+      <div class="metric" data-metric data-value="6" data-suffix="">
+        <div class="metric-value mono"><span class="metric-num">0</span><span class="metric-suffix"></span></div>
+        <div class="metric-label">Business Functions Supported</div>
+      </div>
+      <div class="metric" data-metric data-value="80" data-suffix="%">
+        <div class="metric-value mono"><span class="metric-num">0</span><span class="metric-suffix">%</span></div>
+        <div class="metric-label">Reporting Automation</div>
+      </div>
+      <div class="metric" data-metric data-value="15" data-suffix="+">
+        <div class="metric-value mono"><span class="metric-num">0</span><span class="metric-suffix">+</span></div>
+        <div class="metric-label">Stakeholders Served</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ABOUT · THE ANALYST
+       ========================================================= -->
+  <section class="about" id="about" data-world="meadow">
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="eyebrow mono" data-reveal>01 · ABOUT</div>
+        <h2 class="section-title" data-split>
+          The right business question, <br>
+          <span class="serif-it">before the first query.</span>
+        </h2>
+      </div>
+      <div class="about-right">
+        <p class="about-bio" data-reveal>
+          I turn raw, messy data into dashboards and systems that <strong>actually get used</strong>. 
+          Currently a <strong>Digital Data Analyst at UAS</strong> — a startup environment where I own 
+          end-to-end analytics: from Power BI dashboards connected to live APIs, to CRM and inventory 
+          systems in Excel that non-technical teams rely on daily.
+        </p>
+        <p class="about-bio" data-reveal>
+          My background isn't just technical. Years of <strong>executive support and investment research</strong> 
+          taught me how to ask the right business question before touching a single dataset. 
+          That mindset carries into everything I build.
+        </p>
+        <p class="about-bio" data-reveal>
+          Certified through <strong>Eskwelabs' Data Analytics Bootcamp</strong>. Always building. Never done.
+        </p>
+
+        <div class="about-tools" data-reveal>
+          <div class="tool-pill"><span class="tool-dot"></span>Business-first questions</div>
+          <div class="tool-pill"><span class="tool-dot"></span>Systems people actually use</div>
+          <div class="tool-pill"><span class="tool-dot"></span>Stakeholder-ready outputs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       HOW I WORK · roadmap-style analytical workflow
+       ========================================================= -->
+  <section class="workflow" id="workflow" data-world="meadow">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow mono" data-reveal>02 · HOW I WORK</div>
+        <h2 class="section-title" data-split>
+          From unclear request <span class="serif-it">to working system.</span>
+        </h2>
+      </div>
+      <p class="workflow-intro" data-reveal>
+        My process is built for stakeholder reality: unclear asks, messy data,
+        changing requirements, and outputs that still need to ship.
+      </p>
+    </div>
+
+    <div class="flow" id="flow" aria-label="Lewis Buenaventura analytical workflow roadmap">
+      <article class="flow-step glass is-left" data-flow>
+        <span class="flow-num mono">01</span>
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v3l2 2"/></svg>
+        </div>
+        <div class="flow-name">Clarify the Decision</div>
+        <div class="flow-desc">Define the business question, decision owner, and what action the analysis should trigger.</div>
+      </article>
+
+      <article class="flow-step glass is-right" data-flow>
+        <span class="flow-num mono">02</span>
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="7" r="3"/><path d="M3 21c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2"/><path d="M21 20c0-2.2-1.3-4-3.5-4"/></svg>
+        </div>
+        <div class="flow-name">Map Stakeholders</div>
+        <div class="flow-desc">Identify who uses the output, what they already track, and where reporting friction exists.</div>
+      </article>
+
+      <article class="flow-step glass is-left" data-flow>
+        <span class="flow-num mono">03</span>
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        </div>
+        <div class="flow-name">Audit Data Sources</div>
+        <div class="flow-desc">Check exports, APIs, tables, field definitions, refresh paths, and data quality risks before building.</div>
+      </article>
+
+      <article class="flow-step glass is-right" data-flow>
+        <span class="flow-num mono">04</span>
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M7 12h10M10 18h4"/><circle cx="19" cy="18" r="2"/></svg>
+        </div>
+        <div class="flow-name">Clean &amp; Model</div>
+        <div class="flow-desc">Turn messy inputs into a reliable model: keys, relationships, measures, validations, and edge cases.</div>
+      </article>
+
+      <article class="flow-step glass is-left" data-flow>
+        <span class="flow-num mono">05</span>
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 17v-5M12 17V7M16 17v-3"/></svg>
+        </div>
+        <div class="flow-name">Build the Output</div>
+        <div class="flow-desc">Create the dashboard, tracker, or automation around the user journey — not around chart decoration.</div>
+      </article>
+
+      <article class="flow-step glass is-right" data-flow>
+        <span class="flow-num mono">06</span>
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12l4 4L19 6"/><path d="M12 2a10 10 0 1 0 10 10"/></svg>
+        </div>
+        <div class="flow-name">Validate With Users</div>
+        <div class="flow-desc">Test totals, filters, logic, and usability with the people who will depend on it.</div>
+      </article>
+
+      <article class="flow-step glass is-left is-final" data-flow>
+        <span class="flow-num mono">07</span>
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6m0 0 3-3m-3 3L9 5"/><path d="M5 12l-2 7a1 1 0 0 0 1 1.3h16A1 1 0 0 0 21 19l-2-7"/><path d="M9 12h6"/></svg>
+        </div>
+        <div class="flow-name">Deploy &amp; Monitor</div>
+        <div class="flow-desc">Ship, document refresh behavior, watch failures, and keep improving based on real usage.</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROJECTS · pinned horizontal scroll, Image 2 structure
+       ========================================================= -->
+  <section class="projects" id="projects" data-world="fog">
+    <div class="projects-pin" id="projectsPin">
+
+      <div class="section-head projects-head">
+        <div>
+          <div class="eyebrow mono" data-reveal>03 · NOTABLE PROJECTS</div>
+          <h2 class="section-title projects-title" data-split>
+            Four builds. <span class="serif-it">Real datasets.</span>
+          </h2>
+        </div>
+        <div class="projects-progress mono" aria-hidden="true">
+          <span id="projCurrent">01</span>
+          <div class="projects-rail"><div class="projects-rail-fill" id="projRail"></div></div>
+          <span>04</span>
+        </div>
+      </div>
+
+      <div class="projects-track" id="projectsTrack">
+
+        <!-- ── PROJECT 01 ── -->
+        <article class="project-card" data-card="0">
+          <header class="project-header">
+            <span class="project-num mono">01</span>
+            <h3 class="project-title">
+              FINANCIAL <br>
+              REPORT
+            </h3>
+          </header>
+
+          <div class="project-body">
+            <a class="project-visual glass-deep" href="case-study.html#financial-report" aria-label="Open case study">
+              <div class="project-shot-placeholder">
+                <div class="shot-grid">
+                  <div class="shot-row"></div><div class="shot-row"></div>
+                  <div class="shot-row"></div><div class="shot-row"></div>
+                </div>
+                <span class="shot-label mono">DASHBOARD SNAPSHOT</span>
+              </div>
+              <img class="project-shot" src="images/project-financial.png" alt="Financial report dashboard"
+                   onerror="this.style.display='none'">
+              <div class="project-shot-grade"></div>
+              <span class="visual-cta mono">OPEN CASE STUDY <span class="cta-arrow"></span></span>
+            </a>
+
+            <div class="project-desc">
+              <p>
+                An end-to-end <strong class="hl">financial reporting build</strong>: consolidating monthly 
+                P&amp;L, revenue, and expense data into one <strong class="hl">Power BI report</strong>. 
+                Placeholder copy — describe the <strong class="hl">variance analysis vs. budget</strong>, 
+                margin trends by segment, and the executive summary view that leadership actually reads. 
+                Close with the outcome: <strong class="hl">reporting time cut, decisions accelerated</strong>.
+              </p>
+            </div>
+          </div>
+
+          <footer class="project-footer">
+            <div class="project-meta">
+              <div class="meta-row">
+                <span class="meta-key mono">TOOLS</span>
+                <span class="meta-val">Excel, Power BI, DAX</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key mono">ANALYSIS</span>
+                <span class="meta-val">Variance, Trend, KPI Reporting</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="case-study.html#financial-report" data-magnetic data-cursor="READ">
+                <span>Case Study</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="#" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">
+                <span>Dashboard</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="#" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">
+                <span>Full Deck</span><span class="cta-arrow"></span>
+              </a>
+            </div>
+          </footer>
+        </article>
+
+        <!-- ── PROJECT 02 ── -->
+        <article class="project-card" data-card="1">
+          <header class="project-header">
+            <span class="project-num mono">02</span>
+            <h3 class="project-title">
+              ITALY COVID-19 <br>
+              PUBLIC HEALTH DATA
+            </h3>
+          </header>
+
+          <div class="project-body">
+            <a class="project-visual glass-deep" href="case-study.html#covid-italy" aria-label="Open case study">
+              <div class="project-shot-placeholder">
+                <div class="shot-grid">
+                  <div class="shot-row"></div><div class="shot-row"></div>
+                  <div class="shot-row"></div><div class="shot-row"></div>
+                </div>
+                <span class="shot-label mono">DASHBOARD SNAPSHOT</span>
+              </div>
+              <img class="project-shot" src="images/project-covid.png" alt="Italy COVID-19 public health analysis"
+                   onerror="this.style.display='none'">
+              <div class="project-shot-grade"></div>
+              <span class="visual-cta mono">OPEN CASE STUDY <span class="cta-arrow"></span></span>
+            </a>
+
+            <div class="project-desc">
+              <p>
+                Analyzed Italy's <strong class="hl">COVID-19 public health dataset</strong> to trace 
+                infection waves, <strong class="hl">regional disparities</strong>, and mortality patterns. 
+                Placeholder copy — walk through cleaning messy public data, the 
+                <strong class="hl">time-series exploration</strong>, and the visualizations that made 
+                a complex crisis <strong class="hl">legible for non-technical stakeholders</strong>.
+              </p>
+            </div>
+          </div>
+
+          <footer class="project-footer">
+            <div class="project-meta">
+              <div class="meta-row">
+                <span class="meta-key mono">TOOLS</span>
+                <span class="meta-val">Python, SQL, Data Viz</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key mono">ANALYSIS</span>
+                <span class="meta-val">EDA, Time Series, Storytelling</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="case-study.html#covid-italy" data-magnetic data-cursor="READ">
+                <span>Case Study</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="#" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">
+                <span>Dashboard</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="#" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">
+                <span>Full Deck</span><span class="cta-arrow"></span>
+              </a>
+            </div>
+          </footer>
+        </article>
+
+        <!-- ── PROJECT 03 ── -->
+        <article class="project-card" data-card="2">
+          <header class="project-header">
+            <span class="project-num mono">03</span>
+            <h3 class="project-title">
+              SEA CO₂ EMISSIONS <br>
+              THAILAND'S PATH TO 1.5°C
+            </h3>
+          </header>
+
+          <div class="project-body">
+            <a class="project-visual glass-deep" href="case-study.html#co2-thailand" aria-label="Open case study">
+              <div class="project-shot-placeholder">
+                <div class="shot-grid">
+                  <div class="shot-row"></div><div class="shot-row"></div>
+                  <div class="shot-row"></div><div class="shot-row"></div>
+                </div>
+                <span class="shot-label mono">DASHBOARD SNAPSHOT</span>
+              </div>
+              <img class="project-shot" src="images/project-co2.png" alt="Thailand climate policy dashboard"
+                   onerror="this.style.display='none'">
+              <div class="project-shot-grade"></div>
+              <span class="visual-cta mono">OPEN CASE STUDY <span class="cta-arrow"></span></span>
+            </a>
+
+            <div class="project-desc">
+              <p>
+                A <strong class="hl">climate policy dashboard</strong> mapping Southeast Asia's CO₂ 
+                emissions, focused on <strong class="hl">Thailand's decarbonization path</strong>. 
+                Placeholder copy — describe emissions baselines, sector breakdowns, and the 
+                <strong class="hl">scenario views toward the 1.5°C target</strong>, designed 
+                to be read by <strong class="hl">policy audiences</strong>, not just analysts.
+              </p>
+            </div>
+          </div>
+
+          <footer class="project-footer">
+            <div class="project-meta">
+              <div class="meta-row">
+                <span class="meta-key mono">TOOLS</span>
+                <span class="meta-val">Python, SQL, Power BI</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key mono">ANALYSIS</span>
+                <span class="meta-val">Scenario Modeling, Policy Analysis</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="case-study.html#co2-thailand" data-magnetic data-cursor="READ">
+                <span>Case Study</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="#" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">
+                <span>Dashboard</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="#" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">
+                <span>Full Deck</span><span class="cta-arrow"></span>
+              </a>
+            </div>
+          </footer>
+        </article>
+
+        <!-- ── PROJECT 04 ── -->
+        <article class="project-card" data-card="3">
+          <header class="project-header">
+            <span class="project-num mono">04</span>
+            <h3 class="project-title">
+              GLASSDOOR DATA ANALYST <br>
+              JOB MARKET
+            </h3>
+          </header>
+
+          <div class="project-body">
+            <a class="project-visual glass-deep" href="case-study.html#glassdoor-jobs" aria-label="Open case study">
+              <div class="project-shot-placeholder">
+                <div class="shot-grid">
+                  <div class="shot-row"></div><div class="shot-row"></div>
+                  <div class="shot-row"></div><div class="shot-row"></div>
+                </div>
+                <span class="shot-label mono">CASE STUDY SNAPSHOT</span>
+              </div>
+              <img class="project-shot" src="images/project-jobmarket.png" alt="Glassdoor data analyst job market analysis"
+                   onerror="this.style.display='none'">
+              <div class="project-shot-grade"></div>
+              <span class="visual-cta mono">OPEN CASE STUDY <span class="cta-arrow"></span></span>
+            </a>
+
+            <div class="project-desc">
+              <p>
+                Analyzed <strong class="hl">2,251 Glassdoor data analyst postings</strong> to understand how
+                salary estimates vary by <strong class="hl">sector, skills, and company location</strong>.
+                The project is split into a cleaning notebook and an EDA notebook, then translated into
+                a stakeholder-ready deck. The <strong class="hl">dashboard is intentionally to follow</strong>.
+              </p>
+            </div>
+          </div>
+
+          <footer class="project-footer">
+            <div class="project-meta">
+              <div class="meta-row">
+                <span class="meta-key mono">TOOLS</span>
+                <span class="meta-val">Python, pandas, Jupyter</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key mono">ANALYSIS</span>
+                <span class="meta-val">Data Cleaning, EDA, Salary Benchmarking</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="case-study.html#glassdoor-jobs" data-magnetic data-cursor="READ">
+                <span>Case Study</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="notebooks/02_eda_and_insights.html" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">
+                <span>Notebook</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="https://github.com/solom0n16/lewis-portfolio/tree/main/notebooks" target="_blank" rel="noopener" data-magnetic data-cursor="CODE">
+                <span>Code</span><span class="cta-arrow"></span>
+              </a>
+              <a class="project-link" href="assets/Sprint_4_Glassdoor_Job_Market_Analysis.pdf" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">
+                <span>Full Deck</span><span class="cta-arrow"></span>
+              </a>
+            </div>
+          </footer>
+        </article>
+
+      </div><!-- /projects-track -->
+    </div><!-- /projects-pin -->
+  </section>
+
+  <!-- =========================================================
+       ▸ NUMBERS SECTION goes here — waiting on final project
+         stats from Lewis. Planned: 3-4 outcome-driven counters
+         (hours saved, rows analyzed, % improvements) with the
+         same count-up treatment as the skills matrix.
+       ========================================================= -->
+
+  <!-- =========================================================
+       EXPERIENCE
+       ========================================================= -->
+  <section class="experience" id="experience" data-world="meadow">
+    <div class="section-head exp-head-row">
+      <div>
+        <div class="eyebrow mono" data-reveal>04 · EXPERIENCE</div>
+        <h2 class="section-title" data-split>
+          A path that pays attention <br>
+          <span class="serif-it">to what the numbers actually mean.</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="exp-rail">
+      <div class="exp-track">
+
+        <article class="exp-item glass" data-exp>
+          <div class="exp-top">
+            <div>
+              <div class="exp-period mono">2026 — PRESENT</div>
+              <div class="exp-role">Data Analyst</div>
+              <div class="exp-org mono">UAS</div>
+            </div>
+          </div>
+          <div class="exp-block">
+            <span class="exp-key mono">CHALLENGE</span>
+            <p>Sales and operations teams lacked real-time visibility into pipeline health, inventory status, and lead follow-ups — relying on scattered manual updates.</p>
+          </div>
+          <div class="exp-block">
+            <span class="exp-key mono">WHAT I BUILT</span>
+            <p>Power BI dashboards, CRM pipeline tracking, and inventory reporting systems connected to live data sources.</p>
+          </div>
+          <ul class="exp-bullets">
+            <li>Cut weekly reporting effort from ~4 hours to ~20 minutes through automation</li>
+            <li>Gave sales real-time pipeline visibility, replacing end-of-week manual updates</li>
+            <li>Surfaced stale leads earlier, tightening follow-up across the team</li>
+            <li>Consolidated scattered trackers into one source teams check daily</li>
+          </ul>
+        </article>
+
+        <article class="exp-item glass" data-exp>
+          <div class="exp-top">
+            <div>
+              <div class="exp-period mono">2026 · APPRENTICESHIP</div>
+              <div class="exp-role">Data Analytics Fellow</div>
+              <div class="exp-org mono">ESKWELABS</div>
+            </div>
+          </div>
+          <div class="exp-block">
+            <span class="exp-key mono">CHALLENGE</span>
+            <p>Real-world datasets — labor market, COVID-19, global emissions — needed to be cleaned, analyzed, and translated into insights for non-technical stakeholders.</p>
+          </div>
+          <div class="exp-block">
+            <span class="exp-key mono">WHAT I BUILT</span>
+            <p>End-to-end analysis workflows using Python, SQL, and data visualization — from raw data to stakeholder-ready dashboards.</p>
+          </div>
+          <ul class="exp-bullets">
+            <li>Delivered 4 end-to-end analyses over a 9-week intensive program</li>
+            <li>Turned Glassdoor labor data into a clear hiring &amp; salary benchmark</li>
+            <li>Presented findings directly to industry mentors and defended the approach</li>
+            <li>Ran the full lifecycle solo: cleaning, analysis, and stakeholder storytelling</li>
+          </ul>
+        </article>
+
+        <article class="exp-item glass" data-exp>
+          <div class="exp-top">
+            <div>
+              <div class="exp-period mono">2023 — 2024</div>
+              <div class="exp-role">Lead Research Analyst</div>
+              <div class="exp-org mono">MARSHLAND CAPITAL</div>
+            </div>
+          </div>
+          <div class="exp-block">
+            <span class="exp-key mono">CHALLENGE</span>
+            <p>Three Partners needed fast, reliable insight across multiple active deal pipelines to make time-sensitive investment decisions.</p>
+          </div>
+          <div class="exp-block">
+            <span class="exp-key mono">WHAT I BUILT</span>
+            <p>Research briefs, dataset analysis, and workflow tracking across concurrent diligence projects.</p>
+          </div>
+          <ul class="exp-bullets">
+            <li>Supported 3 Partners' decisions across multiple concurrent deal pipelines</li>
+            <li>Turned raw investment data into concise briefs that shortened review cycles</li>
+            <li>Flagged risks and opportunities early enough to shape diligence direction</li>
+            <li>Kept documentation and next steps aligned after every pitch and diligence call</li>
+          </ul>
+        </article>
+
+        <article class="exp-item glass" data-exp>
+          <div class="exp-top">
+            <div>
+              <div class="exp-period mono">2024 — 2025</div>
+              <div class="exp-role">Independent Trader &amp; Operations Support</div>
+              <div class="exp-org mono">SELF-EMPLOYED</div>
+            </div>
+          </div>
+          <div class="exp-block">
+            <span class="exp-key mono">CHALLENGE</span>
+            <p>Market decisions required consistent, data-backed analysis rather than reactive or emotional trading.</p>
+          </div>
+          <div class="exp-block">
+            <span class="exp-key mono">WHAT I BUILT</span>
+            <p>A disciplined analytical framework combining market research, trend tracking, and structured trading logs.</p>
+          </div>
+          <ul class="exp-bullets">
+            <li>Replaced reactive decisions with a repeatable, data-backed trading framework</li>
+            <li>Tracked market trends and indicators systematically instead of by gut feel</li>
+            <li>Maintained structured logs that made performance reviewable week over week</li>
+            <li>Built the discipline of interpreting data before acting on it</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CREDENTIALS · THE ORBIT
+       Certificates as floating glass cards orbiting a core.
+       Drag to spin the system; click a card to view.
+       ========================================================= -->
+  <section class="credentials" id="credentials" data-world="fog">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow mono" data-reveal>05 · CREDENTIALS</div>
+        <h2 class="section-title" data-split>
+          Proof in <span class="serif-it">orbit.</span>
+        </h2>
+      </div>
+      <div class="orbit-hint mono" data-reveal aria-hidden="true">
+        DRAG TO SPIN · CLICK CERTIFICATE TO VIEW
+      </div>
+    </div>
+
+    <div class="orbit-stage" id="orbitStage" data-cursor="DRAG">
+      <!-- the core -->
+      <div class="orbit-core" aria-hidden="true">
+        <div class="orbit-core-glow"></div>
+        <div class="orbit-core-body glass-deep">
+          <span class="orbit-core-count mono">02</span>
+          <span class="orbit-core-label mono">CREDENTIALS</span>
+        </div>
+        <div class="orbit-ring orbit-ring-1"></div>
+        <div class="orbit-ring orbit-ring-2"></div>
+      </div>
+
+      <!-- real credential cards — no placeholder certificates shown publicly -->
+      <a class="orbit-card glass" href="images/eskwelabs-certificate.png" target="_blank" rel="noopener" data-orbit data-cursor="OPEN">
+        <span class="orbit-card-tag mono">BOOTCAMP · 2026</span>
+        <span class="orbit-card-name">Data Analytics Bootcamp</span>
+        <span class="orbit-card-issuer mono">ESKWELABS · COHORT 21</span>
+      </a>
+      <a class="orbit-card glass" href="#" data-orbit data-cursor="OPEN" aria-label="PL-300 in progress">
+        <span class="orbit-card-tag mono">IN PROGRESS</span>
+        <span class="orbit-card-name">PL-300 Power BI Analyst</span>
+        <span class="orbit-card-issuer mono">MICROSOFT</span>
+      </a>
+    </div>
+
+    <div class="credential-proof glass-deep" data-reveal>
+      <div class="credential-proof-copy">
+        <span class="credential-proof-tag mono">FEATURED CERTIFICATE</span>
+        <h3>Eskwelabs Data Analytics Bootcamp</h3>
+        <p>Completed Cohort 21 from January 26, 2026 to March 28, 2026. This certificate supports the portfolio narrative: technical fundamentals, analytical thinking, and stakeholder-ready storytelling.</p>
+        <a class="project-link" href="images/eskwelabs-certificate.png" target="_blank" rel="noopener" data-cursor="OPEN">
+          <span>View certificate</span><span class="cta-arrow"></span>
+        </a>
+      </div>
+      <a class="credential-proof-img" href="images/eskwelabs-certificate.png" target="_blank" rel="noopener" aria-label="Open Eskwelabs certificate image">
+        <img src="images/eskwelabs-certificate.png" alt="Eskwelabs Data Analytics Bootcamp Certificate of Completion for Lewis Lloyd Buenaventura">
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TESTIMONIALS · social proof (placeholders)
+       ========================================================= -->
+  <section class="testimonials" id="testimonials" data-world="meadow">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow mono" data-reveal>06 · TESTIMONIALS</div>
+        <h2 class="section-title" data-split>
+          What it's like <span class="serif-it">to work with me.</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="tm-grid">
+      <figure class="tm-card glass" data-tm data-tilt-lite>
+        <div class="tm-quote-mark" aria-hidden="true">"</div>
+        <blockquote class="tm-quote">
+          Placeholder testimonial — a manager or colleague describes a specific
+          outcome you delivered and what it was like to work with you. Two to
+          three sentences lands best.
+        </blockquote>
+        <figcaption class="tm-author">
+          <div class="tm-avatar mono">?</div>
+          <div class="tm-author-meta">
+            <div class="tm-name">Full Name</div>
+            <div class="tm-role mono">ROLE · COMPANY</div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="tm-card glass" data-tm data-tilt-lite>
+        <div class="tm-quote-mark" aria-hidden="true">"</div>
+        <blockquote class="tm-quote">
+          Placeholder testimonial — ideally someone non-technical who relied on
+          a dashboard you built. Their trust in the numbers is the story here.
+        </blockquote>
+        <figcaption class="tm-author">
+          <div class="tm-avatar mono">?</div>
+          <div class="tm-author-meta">
+            <div class="tm-name">Full Name</div>
+            <div class="tm-role mono">ROLE · COMPANY</div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="tm-card glass" data-tm data-tilt-lite>
+        <div class="tm-quote-mark" aria-hidden="true">"</div>
+        <blockquote class="tm-quote">
+          Placeholder testimonial — a mentor or peer from Eskwelabs speaking to
+          your analytical rigor or how you present findings.
+        </blockquote>
+        <figcaption class="tm-author">
+          <div class="tm-avatar mono">?</div>
+          <div class="tm-author-meta">
+            <div class="tm-name">Full Name</div>
+            <div class="tm-role mono">ROLE · COMPANY</div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTACT
+       ========================================================= -->
+  <section class="contact" id="contact" data-world="dawn">
+    <div class="contact-content">
+      <div class="eyebrow mono" data-reveal>07 · CONTACT</div>
+      <h2 class="contact-headline" data-split>
+        Got a dataset that needs <br>
+        <span class="serif-it">a second pair of eyes?</span>
+      </h2>
+      <p class="contact-support" data-reveal>
+        I'm open to dashboard projects, analytics consulting, and full-time roles.
+        Let's figure out what your data is trying to say.
+      </p>
+
+      <div class="contact-actions" data-reveal>
+        <div class="contact-btn-row">
+          <a class="btn btn-primary btn-xl mono" href="mailto:buenaventuralewis@gmail.com" data-magnetic data-cursor="MAIL">
+            <span>BUENAVENTURALEWIS@GMAIL.COM</span>
+            <span class="cta-arrow"></span>
+          </a>
+          <a class="btn btn-ghost btn-xl mono" href="Lewis-Buenaventura-Resume.pdf" download data-magnetic data-cursor="OPEN">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="btn-dl-icon"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span>DOWNLOAD RÉSUMÉ</span>
+          </a>
+        </div>
+        <div class="contact-secondary mono">
+          <span class="muted">ALSO ON</span>
+          <a href="https://www.linkedin.com/in/lewisbuenaventura" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">LINKEDIN</a>
+          <i>·</i>
+          <a href="#" target="_blank" rel="noopener" data-magnetic data-cursor="OPEN">GITHUB</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-footer mono">
+      <span>© 2026 LEWIS BUENAVENTURA · BUILT WITH CARE</span>
+      <span class="contact-clock" id="contactClock">MNL · LIVE</span>
+    </div>
+
+    <button class="back-to-top glass" id="backToTop" aria-label="Back to top" data-magnetic>
+      <svg viewBox="0 0 24 24" fill="none"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </section>
+
+  </main>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="xhair" id="xhair" aria-hidden="true">
+    <div class="xhair-dot"></div>
+    <div class="xhair-ring" id="xhairRing"></div>
+    <div class="xhair-coords mono" id="xhairCoords">x:0000 · y:0000</div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-fill" id="scrollProgressFill"></div></div>
+
+  <!-- libs -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="js/world.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
